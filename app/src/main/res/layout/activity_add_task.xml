@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <!-- Declare any variables you might need here, if applicable -->
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ADD8E6"
+        tools:context=".AddTaskActivity">
+
+        <!-- Add Task Title -->
+
+        <!-- Task input field -->
+
+        <!-- Description input field -->
+
+        <!-- Save button -->
+
+        <!-- Set user input text color here -->
+        android:textColorHint="@color/navyblue"
+        android:textIsSelectable="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <!-- Bottom Navigation View -->
+
+        <!-- Increase text size -->
+        android:shadowColor="@color/black" <!-- Shadow color -->
+        android:shadowDx="2" <!-- Horizontal offset of shadow -->
+        android:shadowDy="2" <!-- Vertical offset of shadow -->
+        android:shadowRadius="2" <!-- Shadow blur radius -->
+        app:layout_constraintBottom_toTopOf="@+id/etTask"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.085" />
+
+
+        <!-- Set user input text color --><![CDATA[
+        android:textColorHint="@color/navyblue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etTask" />
+
+        ]]>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="Add Task"
+            android:textColor="@color/navyblue"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/etTask"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etTask"
+            android:layout_width="373dp"
+            android:layout_height="43dp"
+            android:background="@drawable/border"
+            android:backgroundTint="@color/white"
+            android:hint="Enter Task"
+            android:inputType="text"
+            android:textColor="@color/navyblue"
+            app:layout_constraintBottom_toTopOf="@+id/etDescription"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.887" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etDescription"
+            android:layout_width="376dp"
+            android:layout_height="45dp"
+            android:background="@drawable/border"
+            android:backgroundTint="@color/white"
+            android:hint="Enter Description"
+            android:inputType="text"
+            android:textColor="@color/navyblue"
+            app:layout_constraintBottom_toTopOf="@+id/bottomNavigation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.485"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.468" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSave"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="Save"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etDescription"
+            app:layout_constraintVertical_bias="0.215" />
+
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/navyblue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:menu="@menu/bottom_nav_menu"
+            tools:ignore="MissingConstraints"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
